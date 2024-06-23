@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin User Management</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="flex flex-col h-screen">
+        <div class="flex-grow flex items-center justify-center">
+            <div class="card max-w-2xl items-center mx-auto">
+                <div class="card-header">
+                    <h2 class="card-title">Admin User Management</h2>
+                    <p class="card-description">Enter user details to create a new user</p>
+                </div>
+                <div class="card-content">
+                    <div class="space-y-4">
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="space-y-2">
+                                <label for="first-name" class="label">First name</label>
+                                <input id="first-name" placeholder="John" required class="input"/>
+                            </div>
+                            <div class="space-y-2">
+                                <label for="last-name" class="label">Last name</label>
+                                <input id="last-name" placeholder="Doe" required class="input"/>
+                            </div>
+                        </div>
+                        <div class="space-y-2">
+                            <label for="email" class="label">Email</label>
+                            <input id="email" placeholder="johndoe@example.com" required type="email" class="input"/>
+                        </div>
+                        <div class="space-y-2">
+                            <label for="password" class="label">Password</label>
+                            <input id="password" required type="password" class="input"/>
+                        </div>
+                        <div class="space-y-2">
+                            <label for="role" class="label">Role</label>
+                            <select id="role" required class="input">
+                                <option value="" disabled selected>Select a role</option>
+                                <option value="admin">Admin</option>
+                                <option value="user">User</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <button class="button w-full" type="submit">Create User</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
